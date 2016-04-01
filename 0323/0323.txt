@@ -1,0 +1,91 @@
+about the data:
+MUPD and BOOne County are up to date until the end of July
+Columbia PD up to date throught 2015
+
+
+According to the manual of blank uniform crash table
+
+
+
+Code for street name:
+IS Interstate 
+CO Connector for Wye Leg
+US U.S. Highway 
+EOR East Outer Road
+MO State Numbered 
+NOR North Outer Road
+RT State Lettered 
+SOR South Outer Road
+AL Alternate Route 
+WOR West Outer Road
+LP Loop (Interstates Only) 
+PVT Private Road
+BU Business Route (US or MO only) 
+RV Reversible
+SP Spur 
+RA Rest Area
+CST City Street 
+WS Weigh Station
+RP Ramp 
+ALY Alley
+CRD County Road 
+BRIDGE Bridge
+
+RDWY. DIR. - (Roadway Direction) Enter the route direction (N, S, E, or W) in this field. Only "N",
+"S", "E", or "W" can be used. For instance, "NE" or "SW" cannot be used. If the first harmful
+event occurred off the roadway, use the roadway direction of the lane where the vehicle initially
+left the roadway. If the first harmful event is on the roadway, use the roadway direction of the
+lane where the first harmful event occurred.
+Enter "NA" for crashes occurring on private property (PP).
+
+Inattentative/distracted include:
+1. External Distraction - Something external to the vehicle distracted the driver or
+pedestrian. Explain in Section 9 - Narrative / Statements.
+2. Passengers - Passenger(s) in the vehicle distracted the driver.
+3. Stereo / Audio / Video Equipment - The driver or pedestrian was distracted
+using stereo, audio, and/or video equipment. Includes equipment both originally
+installed by the vehicle manufacturer and other equipment of this type in the
+vehicle.
+4. Navigation Device - The driver or pedestrian was distracted while viewing or
+operating a navigation device. This includes GPS or other devices being used
+for navigation.
+5. Communication Device - Hand-held - The driver or pedestrian was distracted
+by using or attempting to use a hand-held mobile communication device to
+include a mobile telephone.
+6. Communication Device - Hands Free - The driver or pedestrian was distracted
+by using or attempting to use a mobile hands-free communication device. This
+includes "On-Star" and other similar services.
+7. Communication Device - Texting / E-mailing - The driver or pedestrian was
+distracted by texting / e-mailing / etc. on a mobile communication device to
+include a mobile telephone.
+8. Communication Device - Web Browsing - The driver or pedestrian was
+distracted by web browsing or other application not listed (i.e., games, etc.) on a
+mobile communication device to include a mobile telephone.
+9. Eating / Drinking - The driver or pedestrian was distracted by eating or drinking.
+10. Reading - The driver or pedestrian was distracted by reading a book,
+newspaper, magazine, etc.
+11. Tobacco Use - The driver or pedestrian was distracted by the use of tobacco.
+This includes the use of a cigarette lighter.
+12. Grooming - The driver or pedestrian was distracted by grooming him or herself.
+13. Computer Equipment / Electronic Games / etc. - The driver or pedestrian was
+distracted by using computer equipment / electronic games, etc. This does not
+include use of a mobile telephone as a computing / gaming device.
+14. Adjusting Vehicle Controls - The driver was distracted by adjusting vehicle
+controls. This does not include adjusting radio controls. These should be shown
+as "Stereo / Audio / Video Equipment."
+108
+15. Other (Explain) - The driver or pedestrian was distracted by something not
+listed. Explain in Section 9 - Narrative and Statements.
+
+Questions:
+On street vs At Stret:
+one person per record or one vehicle per record or one cricumstance per record?
+person involvement
+Circumstance for pedestrian vs the driver
+
+Mapped,0150014589,201500002508,Thu,01/22/2015,09:12:00,1,1,Driver Present,University of MO (columbia),F,BOONE,COLUMBIA,Pedestrian,Personl Injury,CST ROLLINS ST,MO 763,Daylight,1,0,Van (< 9W/Driver),Physical Impairment
+Mapped,0150014589,201500002508,Thu,01/22/2015,09:12:00,1,1,Driver Present,University of MO (columbia),F,BOONE,COLUMBIA,Pedestrian,Personl Injury,CST ROLLINS ST,MO 763,Daylight,1,0,Van (< 9W/Driver),Failed to Yield
+Mapped,0150014589,201500002508,Thu,01/22/2015,09:12:00,1,1,Pedestrian,University of MO (columbia),F,BOONE,COLUMBIA,Pedestrian,Personl Injury,CST ROLLINS ST,MO 763,Daylight,1,0,Van (< 9W/Driver),Failed to Yield
+
+can I get the more Inattentative/distracted
+
