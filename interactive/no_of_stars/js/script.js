@@ -2,7 +2,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var formatDate = d3.time.format("%Y");
+var parseDate = d3.time.format("%Y").parse;
 
 var x = d3.time.scale()
     .range([0, width]);
@@ -18,41 +18,32 @@ var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left");
 
-var line = d3.svg.line()
-    .x(function(d) { 
-      return x(d.year);
-    })
-    .y(function(d) { 
-    	return y(d.no_of_fatalities); 
-    });
+var area = d3.svg.area()
+    .x(function(d) { console.log(d); return x(d.year); })
+    .y0(height)
+    .y1(function(d) { return y(d.stars); });
 
-var svg = d3.select(".chart").append("svg")
+var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("fatalities.tsv", type, function(error, data) {
+d3.tsv("no_of_stars.tsv", function(error, data) {
   if (error) throw error;
-  console.log(data)
-
-  var y2005 = data[0].no_of_fatalities;
-
-  //pct = new - old / old
 
   data.forEach(function(d) {
-    d.chg = (d.no_of_fatalities - y2005)/y2005;
-  })
+    d.year = parseDate(d.year);
+    d.stars = +d.stars;
+  });
 
-  console.log(data);
+  x.domain(d3.extent(data, function(d) { return d.year; }));
+  y.domain([0, d3.max(data, function(d) { return d.stars; })]);
 
-  x.domain(d3.extent(data, function(d) { 
-      return d.year; 
-}));
-
-  y.domain(d3.extent(data, function(d) { 
-      return d.no_of_fatalities; 
-}));
+  svg.append("path")
+      .datum(data)
+      .attr("class", "area")
+      .attr("d", area);
 
   svg.append("g")
       .attr("class", "x axis")
@@ -67,23 +58,5 @@ d3.tsv("fatalities.tsv", type, function(error, data) {
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Number of injuries");
-
-  svg.append("path")
-      .datum(data)
-      .attr("class", "line")
-      .attr("d", line);
-
- });
-function type(d) {
-  d.year = formatDate.parse(d.year);
-  d.no_of_fatalities = +d.no_of_fatalities;
-  return d;
-}
-
-
-
-
-
-
-
+      .text("Number of STARS reports");
+});
