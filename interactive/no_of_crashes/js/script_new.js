@@ -41,7 +41,7 @@ var svg = d3.select(".chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("no_of_crashes.csv", function(error, data) {
+d3.tsv("no_of_crashes.tsv", function(error, data) {
   if (error) throw error;
 
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "year"; }));
@@ -60,7 +60,7 @@ d3.csv("no_of_crashes.csv", function(error, data) {
   }));
 
   x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain([0, 15000])
+  y.domain([0, 7000])
 
   var browser = svg.selectAll(".browser")
       .data(browsers)
