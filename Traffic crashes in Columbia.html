@@ -1,0 +1,103 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Traffic crashes in Columbia</title><?php /* EDIT ME */ ?>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+</head>
+
+<body class="">
+
+    <div id="main-wrapper" class="">
+        <div id="main-content" class="container">
+            <header class="row">
+                <div class="social-links col-md-12"></div>
+                <div class="col-md-12">
+
+                    <h1>Traffic crashes in Columbia</h1>
+                    <div class="byline">
+                        <h5>By<a href="https://github.com/yhy6f">Jasmine Ye Han </a> May. 4, 2016</h5>
+                    </div>
+                </div>
+            </header>
+
+            <section>
+                <p class="lead">
+                Traffic crashes investigated by law enforcement officers have uniform reports in the Statewide Traffic Accident Records System (STARS) by the state highway patrol records division. A look into STARS reports data reveals some interesting patterns.
+                </p>
+            </section>
+
+            <section class="row">
+
+
+                <!-- Give each button a `val` attribute. We'll use them to match the value of each to the three chart classes so we can use them as selectors in the javascript. -->
+                <div class="col-md-8">
+                    <div class="btn-group" role="group" aria-label="...">
+                        <button val="chart1" class="btn btn-default active">Number of crashes</button>
+                        <button val="chart2" class="btn btn-default">Number of injuries</button>
+                        <button val="chart3" class="btn btn-default">Number of fatalities</button>
+                    </div>
+                </div>
+
+                <div class="col-md-8 charts-here">
+
+                    <div class="chart-container chart1 active">
+                        <h4>Number of crashes</h4>
+                        <div class="chartOne">
+                        </div>
+                    </div>
+                    <div class="chart-container chart2">
+                        <h4>Number of injuries</h4>
+                        <div class="chartTwo"></div>
+                    </div>
+                    <div class="chart-container chart3">
+                        <h4>Number of fatalities</h4>
+                        <div class="chartThree"></div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 charts-here">
+                    <p class="lead chart-text" id="chart1-text">Chart1: Since 2005, the number of STARS reported crashes in Columbia has dropped by over 60%. The number of 911 calls regarding traffic collisions has remained largely the same. Columbia Police Department changed its accident policy in November 2009 and stopped attending to minor collisions. The increasing gap could mean more crashes going unreported.</p>
+                    <p class="lead chart-text" id="chart2-text">Chart2: Despite the policy change, the police are still required to investigate crashes causing injuries and fatalities. In 2015, the number of people injured dropped by 27% compared to 2005.</p>
+                    <p class="lead chart-text" id="chart3-text">Chart3: The number of fatalities caused by traffic accidents has been fluctuating from 2005 to 2015, with a trend of increasing after a sharp decrease in 2010.</p>
+                </div>
+
+            </section>
+
+            <footer>
+                <div id="source-line">Source: Missouri State Highway Patrol, City of Columbia Joint Communication.</div>
+            </footer>
+
+        </div>
+    </div>
+
+
+
+    <!-- jQuery.js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
+    <!-- D3.js -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.js" charset="utf-8"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Our application script -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
