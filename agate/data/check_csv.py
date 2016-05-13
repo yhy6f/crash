@@ -1,12 +1,12 @@
 import csv
 
-with open('crashes2011.csv') as f:
+with open('persons2006.csv') as f:
     reader = csv.reader(f, delimiter =",")
     i = 0
     for row in reader:
 
         i = i+1;
-        if len(row) > 49:
+        if len(row) > 39:
             print i
 
 
